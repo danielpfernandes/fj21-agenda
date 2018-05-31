@@ -1,11 +1,11 @@
-package br.com.caelum.jdbc.dao;
+package br.com.caelum.agenda.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import br.com.caelum.jdbc.ConnectionFactory;
-import br.com.caelum.jdbc.modelo.Funcionario;
+import br.com.caelum.agenda.ConnectionFactory;
+import br.com.caelum.agenda.modelo.Funcionario;
 
 public class FuncionarioDao {
 	private Connection connection;

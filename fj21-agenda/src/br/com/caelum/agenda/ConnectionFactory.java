@@ -1,4 +1,4 @@
-package br.com.caelum.jdbc;
+package br.com.caelum.agenda;
 
 
 import java.sql.Connection;
@@ -13,7 +13,7 @@ public class ConnectionFactory {
 			throw new RuntimeException(e);
 		}
 		try {
-			return DriverManager.getConnection("jdbc:mysql://localhost/fj21?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "toor", "root");
+			return DriverManager.getConnection("jdbc:mysql://localhost/fj21?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "root", "root");
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}
