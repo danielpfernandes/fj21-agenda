@@ -1,4 +1,3 @@
-<%@page import="br.com.caelum.agenda.dao.ContatoDao"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -11,10 +10,10 @@
 </head>
 <body>
 	<c:import url="cabecalho.jsp" />
-	<jsp:useBean id="dao" class="br.com.caelum.agenda.dao.ContatoDao" />
 	<table>
-		<c:forEach var="contato" items="${dao.lista}">
+		<c:forEach var="contato" items="${contatos}">
 			<tr>
+				<td>${contato.id}</td>
 				<td>${contato.nome}</td>
 				<td><c:choose>
 						<c:when test="${not empty contato.email}">
@@ -26,6 +25,7 @@
 					</c:choose></td>
 				<td>${contato.endereco}</td>
 				<td><fmt:formatDate value ="${contato.dataNascimento.time}" pattern="dd/MM/yyyy"/></td>
+				<td><a href="mvc?logica=RemoveContatoLogic&id=${contato.id}">Remover</a></td>
 			</tr>
 		</c:forEach>
 	</table>
