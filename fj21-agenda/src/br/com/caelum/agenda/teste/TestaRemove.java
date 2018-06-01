@@ -8,6 +8,7 @@ public class TestaRemove {
 		Contato contato = new Contato();
 		contato.setId((long) 2);
 		
+		
 		ContatoDao dao = new ContatoDao();
 		
 		dao.remove(contato);
